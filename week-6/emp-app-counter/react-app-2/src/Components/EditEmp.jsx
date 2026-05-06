@@ -26,7 +26,7 @@ function EditEmp() {
     const onSubmit = async (data) => {
         setIsLoading(true)
         try {
-            await axios.put(`http://localhost:1005/edit/${state._id}`, data)
+            await axios.put(`https://eems-app.onrender.com/edit/${state._id}`, data)
             console.log("Employee updated:", data)
             alert("Employee updated successfully!")
             navigate("/list")

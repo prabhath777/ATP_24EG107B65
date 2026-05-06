@@ -23,7 +23,7 @@ function List(){
             // Optimistically remove from UI immediately
             setEmps(prevEmps => prevEmps.filter(emp => emp._id !== id));
             
-            const res = await axios.delete(`http://localhost:1005/remove/${id}`);
+            const res = await axios.delete(`https://eems-app.onrender.com/remove/${id}`);
             
             if (res.status === 200) {
                 console.log("Employee deleted successfully");
@@ -45,7 +45,7 @@ function List(){
     }
    
     async function getEmps() {
-      let res = await fetch("http://localhost:1005/emps");
+      let res = await fetch("https://eems-app.onrender.com/emps");
       if (res.status === 200) {
         let resObj = await res.json();
         setEmps(resObj.payload);

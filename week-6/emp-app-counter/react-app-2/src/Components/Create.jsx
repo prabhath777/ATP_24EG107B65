@@ -12,7 +12,7 @@ function Create() {
     const onSubmit = async (data) => {
         setIsLoading(true)
         try {
-            const response = await fetch("http://localhost:1005/emp", {
+            const response = await fetch("https://eems-app.onrender.com/emp", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
