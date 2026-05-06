@@ -1,17 +1,17 @@
-POST http://localhost:1005/emp
+POST https://eems-app.onrender.com/emp
 Content-Type: application/json
 
 {
-    "name":"donald trump",
+    "name":"rambo",
     "email":"heelo@gmail.com",
     "mobile":"56789",
-    "companyname":"janitor"
+    "companyname":"worker"
 
 }
 
 ###
 
-GET http://localhost:1005/emps
+GET https://eems-app.onrender.com/emps
 
 
 ###
