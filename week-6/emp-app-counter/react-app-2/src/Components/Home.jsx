@@ -1,6 +1,7 @@
 import React from 'react'
 import Counter from './Counter'
 
+
 function Home() {
   return (
     <div className="p-4 space-y-6">
@@ -9,7 +10,7 @@ function Home() {
       
       <div className="mt-8">
        
-        <Counter />
+          <Counter />
       </div>
     </div>
   )

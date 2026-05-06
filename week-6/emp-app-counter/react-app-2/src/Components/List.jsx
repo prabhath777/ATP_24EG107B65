@@ -1,7 +1,8 @@
 import axios from 'axios';
 import  { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router';
-import Counter from './Counter';
+import Counter from './Counter'
+
 
 function List(){
 
@@ -97,7 +98,6 @@ function List(){
 
       {/* Counter Demo on List Page */}
       <div className="max-w-md mx-auto">
-        <h2 className="text-xl font-semibold text-gray-700 mb-4">📊 Counter (List Page)</h2>
         <Counter />
       </div>
     </div>

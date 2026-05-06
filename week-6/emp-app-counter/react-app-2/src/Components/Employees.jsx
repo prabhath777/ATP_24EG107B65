@@ -2,7 +2,8 @@ import { useLocation } from "react-router"
 import { motion } from "framer-motion";
 import { useState } from "react";
 import TiltCard from "./TiltCard";
-import Counter from "./Counter";
+import Counter from "./Counter"
+
 // function Employees() {
 //  const {state} = useLocation()
 //  console.log(state)

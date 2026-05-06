@@ -3,6 +3,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router"
 import Counter from "./Counter"
 
+
 function Create() {
     const {register, handleSubmit, formState: { errors }} = useForm()
     const [isLoading, setIsLoading] = useState(false)
@@ -108,7 +109,6 @@ function Create() {
 
             {/* Counter Demo on Create Page */}
             <div className="max-w-md mx-auto">
-                <h2 className="text-xl font-semibold text-gray-700 mb-4">📊 Counter (Create Page)</h2>
                 <Counter />
             </div>
         </div>

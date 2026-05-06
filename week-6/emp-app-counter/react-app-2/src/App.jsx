@@ -39,6 +39,7 @@ function App() {
     }
 
   ])
+
   return (
     <CounterProvider>
       <RouterProvider router={routerobj} />
