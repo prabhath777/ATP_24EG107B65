@@ -2,10 +2,10 @@ POST http://localhost:1005/emp
 Content-Type: application/json
 
 {
-    "name":"kai cenat",
+    "name":"donald trump",
     "email":"heelo@gmail.com",
     "mobile":"56789",
-    "companyname":"dalle"
+    "companyname":"janitor"
 
 }
 
