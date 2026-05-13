@@ -9,6 +9,14 @@ import { uploadToCloudinary } from '../config/cloudinaryUpload.js'
 const {sign}=jwt
 export const commonApp=exp.Router()
 
+// cookie options based on environment
+const isProd = process.env.NODE_ENV === 'production'
+const cookieOptions = {
+  httpOnly: true,
+  sameSite: isProd ? 'none' : 'lax',
+  secure: isProd,
+}
+
 //router to rigester user
 commonApp.post("/user", upload.single("profileImageUrl"), async (req, res, next) => {
   let cloudinaryResult;
@@ -72,11 +80,7 @@ commonApp.post('/login',async(req,res)=>{
     // after verification generate a token 
     const signedToken=sign({id:user._id,email:email,role:user.role},process.env.SECRET_KEY,{expiresIn:'1h'})
     // store the token in httpOnly cookie
-    res.cookie("token",signedToken,{
-        httpOnly:true,
-        sameSite:"lax",
-        secure:false
-    })
+    res.cookie("token", signedToken, cookieOptions)
     // delete password from user object
     const userObj=user.toObject()
     delete userObj.password
@@ -84,13 +88,9 @@ commonApp.post('/login',async(req,res)=>{
 
 })
 // Route for Logout
-commonApp.get("/logout",(req,res)=>{
-    res.clearCookie("token",{
-        httpOnly:true,
-        sameSite:"lax",
-        secure:false
-    })
-    res.status(200).json({message:"Logout success"})
+commonApp.get("/logout", (req, res) => {
+  res.clearCookie("token", cookieOptions)
+  res.status(200).json({ message: "Logout success" })
 })
 
 // change password

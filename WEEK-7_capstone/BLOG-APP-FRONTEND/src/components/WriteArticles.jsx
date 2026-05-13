@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import axios from "axios";
+import axios from "../api/axiosInstance.js";
+import { toast } from "react-hot-toast";
 
 import { useNavigate } from "react-router";
 
@@ -30,23 +31,24 @@ function WriteArticles() {
 
   //save article
   const submitArticle = async (articleObj) => {
+    if (!currentUser) {
+      toast.error("Please login to publish articles");
+      navigate("/login");
+      return;
+    }
+
     setLoading(true);
 
-    //add authorId to articleObj
+    // add authorId to articleObj
     articleObj.author = currentUser._id;
-    try {
-        //set loading to true
-        setLoading(true)
-        // console.log(articleObj)
-        //make POST request
-        let res=await axios.post("http://localhost:4000/author-api/article",articleObj,{withCredentials:true})
-        //navigate to auhtor articles
-        console.log(res.status)
-        if(res.status===201){
-            navigate("/author-profile/articles")
-        }
 
-   
+    try {
+      // make POST request
+      const res = await axios.post(`/author-api/article`, articleObj);
+
+      if (res.status === 201) {
+        navigate("/author-profile/articles");
+      }
     } catch (err) {
       toast.error(err.response?.data?.error || "Failed to publish article");
     } finally {

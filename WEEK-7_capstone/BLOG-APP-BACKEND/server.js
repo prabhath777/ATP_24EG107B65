@@ -14,9 +14,20 @@ config()
 // creating an express application
 const app=exp()
 // enable CORS with credentials for local frontend
+// enable CORS with credentials for frontend(s)
+const allowedOrigins = [process.env.FRONTEND_URL, "http://localhost:5173"].filter(Boolean)
 app.use(
     cors({
-        origin: process.env.FRONTEND_URL || "http://localhost:5173",
+        origin: (origin, callback) => {
+            // allow non-browser tools like curl/postman (no origin)
+            if (!origin) return callback(null, true)
+
+            if (allowedOrigins.indexOf(origin) !== -1) {
+                callback(null, true)
+            } else {
+                callback(new Error("Not allowed by CORS"))
+            }
+        },
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true,
     })
