@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBlog</title>
+  <link rel="stylesheet" href="/style10.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <h1>QuickBlog</h1>
+    <ul>
+      <li>Home</li>
+      <li>Blogs</li>
+      <li>Tags</li>
+    </ul>
+    <input type="text" placeholder="Search">
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <h1>Best Blogging Website of The Year 2025</h1>
+    <h2>1M+ Users</h2>
+    <h3>Used by Industry Professionals</h3>
+
+    <section>
+      <!-- CARD -->
+      <div class="card reveal">
+        <div class="card-inner">
+          <p>Andrej Karpathy</p>
+          <img src="../assets/qw.jpeg" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="button">Read More</button>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-inner">
+          <p>Andrej Karpathy</p>
+          <img src="../assets/qw.jpeg" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="button">Read More</button>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-inner">
+          <p>Andrej Karpathy</p>
+          <img src="../assets/qw.jpeg" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="button">Read More</button>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-inner">
+          <p>Andrej Karpathy</p>
+          <img src="../assets/qw.jpeg" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="button">Read More</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <article>
+      <h3>Contact</h3>
+      <p>Lorem ipsum dolor.</p>
+    </article>
+    <article>
+      <h3>Contact</h3>
+      <p>Lorem ipsum dolor.</p>
+    </article>
+    <article>
+      <h3>Contact</h3>
+      <p>Lorem ipsum dolor.</p>
+    </article>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Cursor glow
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("mousemove", e => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--x", `${e.clientX - rect.left}px`);
+        card.style.setProperty("--y", `${e.clientY - rect.top}px`);
+      });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll(".reveal");
+
+    window.addEventListener("scroll", () => {
+      reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

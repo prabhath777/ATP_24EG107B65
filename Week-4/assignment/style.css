@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+ p{
+    color: rgb(0, 0, 0);
+    justify-content: center;
+ }
+
+ h4{
+    color: rgb(0, 0, 0);
+    text-underline-position: below;
+ }
+
+ li{
+    color: rgb(0, 0, 0);
+ }
+ h3{
+    color: rgb(0, 0, 0);
+ }
+
+ img{
+    display: block;
+    margin: auto;
+    
+ }
+ a{
+    color: rgb(255, 0, 0);
+ }

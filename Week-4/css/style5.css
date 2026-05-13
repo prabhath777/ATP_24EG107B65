@@ -1,0 +1,121 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.emp-card{
+    width:500px;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgb(255, 255, 255);
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+     background-color: azure;
+    
+}
+h2{
+    margin-bottom: 10px;
+     background-color: azure;
+}
+img{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    box-shadow: 3px 3px 10px black;
+}
+button{
+    border-radius: 90px;
+}
+button:hover{
+    background-color: black;
+    color: antiquewhite;
+}
+.h{
+    background-color:rgb(255, 255, 255);
+} */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+.emp-card{
+    width:500px;
+    margin:auto;
+    padding:50px;
+    margin-top:100px;
+
+    background:white;
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    border:1px solid #e5e7eb;
+
+    text-align:center;
+
+    transition:all 0.3s ease;
+}
+
+.emp-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;
+    margin-bottom:20px;
+    color:#111827;
+    background:transparent;
+}
+
+h2{
+    margin-bottom:10px;
+    color:#374151;
+    background:transparent;
+}
+
+img{
+    width:180px;
+    height:180px;
+    border-radius:100px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+
+    margin-bottom:20px;
+}
+
+button{
+    border:none;
+    border-radius:999px;
+
+    padding:10px 22px;
+
+    background:#111827;
+    color:white;
+
+    font-size:14px;
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:all 0.25s ease;
+}
+
+button:hover{
+    background:#000;
+    transform:scale(1.05);
+}
+
+.h{
+    background:white;
+}

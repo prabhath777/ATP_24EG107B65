@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+.card{
+    width:500px;
+    margin:auto;
+    padding:50px;
+    margin-top:100px;
+
+    background:white;
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    border:1px solid #ffffff;
+
+    text-align:center;
+
+    transition:all 0.3s ease;
+    position: absolute;
+    left: 500px;
+    top: 90px;
+    background-color: beige;
+    display: flex;
+}
+.profile{
+    background-color: rgb(255, 255, 255);
+}
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+.linkedin{
+    padding: 10px;
+    width: 90px;
+    margin: auto;
+    position: relative;
+    top: 110px;
+    border: 3px solid black;
+    box-shadow: 3px solid black;
+}
+.github{
+     padding: 10px;
+    width: 90px;
+    margin: auto;
+    position: relative;
+    bottom: 380px;
+    left: 220px;
+    border: 3px solid black;
+    box-shadow: 3px solid black;
+}
+img{
+    width:180px;
+    height:180px;
+    border-radius:100px;
+background-color: rgb(255, 255, 255);
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+
+    margin-bottom:0px;
+}

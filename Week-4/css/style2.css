@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(218, 218, 218);
+    
+}
+img{
+    width: 200px;
+    display: block;
+    margin: auto;
+    
+}
+h1{
+    
+    text-align: center;
+    color: #ff0000;
+    
+}
+h1:hover{
+    
+    text-align: center;
+    color: #000000;
+    content: icon;
+    
+}
+h2{
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+
+div{
+   margin-left: 200px;
+   margin-right: 200px;
+   margin-bottom: 200px;
+   text-align: justify;
+}
