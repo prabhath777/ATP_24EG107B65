@@ -15,14 +15,22 @@ config()
 const app=exp()
 // enable CORS with credentials for local frontend
 // enable CORS with credentials for frontend(s)
-const allowedOrigins = [process.env.FRONTEND_URL, "https://blogappb65.vercel.app/"].filter(Boolean)
+const normalizeOrigin = (u) => u?.replace(/\/+$/, '')
+const allowedOrigins = [process.env.FRONTEND_URL, "https://blogappb65.vercel.app"].filter(Boolean).map(normalizeOrigin)
 app.use(
     cors({
         origin: (origin, callback) => {
             // allow non-browser tools like curl/postman (no origin)
             if (!origin) return callback(null, true)
 
-            if (allowedOrigins.indexOf(origin) !== -1) {
+            const incoming = normalizeOrigin(origin)
+            // debug log in non-production
+            if (process.env.NODE_ENV !== 'production') {
+                console.log('CORS check - incoming origin:', origin)
+                console.log('CORS allowedOrigins:', allowedOrigins)
+            }
+
+            if (allowedOrigins.indexOf(incoming) !== -1) {
                 callback(null, true)
             } else {
                 callback(new Error("Not allowed by CORS"))
