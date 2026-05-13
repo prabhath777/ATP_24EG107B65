@@ -44,9 +44,7 @@ The project implements complete CRUD operations and demonstrates frontend-backen
 ---
 
 
-# Concepts Learned
 
----
 
 # 1. CRUD Operations
 

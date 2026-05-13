@@ -8,7 +8,7 @@ The main focus of this week was learning the fundamentals of React, understandin
 
 Topics covered include:
 - React fundamentals
-- Components
+- Component
 - JSX
 - Props and State
 - Rendering dynamic data

@@ -7,7 +7,7 @@ This repository contains the work and practice completed during Week 1 of my Jav
 The main focus of this week was understanding the fundamentals of JavaScript, problem solving, functions, arrays, callbacks, and basic programming concepts.
 
 Topics covered include:
-- Variables and Data Types
+- Variables and Data Type
 - Functions
 - Arrays
 - Array Operations

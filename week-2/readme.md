@@ -217,6 +217,6 @@ Week-2/
 
 - Express.js
 - MongoDB
-- REST APIs
+- REST API
 - CRUD Operations
 - Full Stack Development

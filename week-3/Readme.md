@@ -7,7 +7,7 @@ This repository contains the work and practice completed during Week 3 of my bac
 The main focus of this week was understanding how backend systems work, learning MongoDB basics, creating APIs, handling routes, and testing endpoints using REST Client.
 
 Topics covered include:
-- Backend fundamentals
+- Backend fundamental
 - Server setup
 - Routing
 - APIs

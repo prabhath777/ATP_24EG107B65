@@ -10,7 +10,7 @@ Topics covered include:
 - Basic HTML structure
 - Text formatting
 - Lists
-- Links
+- Link
 - Images
 - Tables
 - Forms
