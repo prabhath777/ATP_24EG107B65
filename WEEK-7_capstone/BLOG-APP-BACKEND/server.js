@@ -15,7 +15,7 @@ config()
 const app=exp()
 // enable CORS with credentials for local frontend
 // enable CORS with credentials for frontend(s)
-const allowedOrigins = [process.env.FRONTEND_URL, "http://localhost:5173"].filter(Boolean)
+const allowedOrigins = [process.env.FRONTEND_URL, "https://blogappb65.vercel.app/"].filter(Boolean)
 app.use(
     cors({
         origin: (origin, callback) => {
