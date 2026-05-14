@@ -1,154 +1,319 @@
-# Blog App — Full-Stack (Backend + Frontend)
+#  Blog App — Full Stack MERN Platform
 
-A full-stack blog application with role-based access control supporting three roles: `USER`, `AUTHOR`, and `ADMIN`.
+<div align="center">
 
-Users can read and comment on articles. Authors can create, edit, and soft-delete their articles. Admins can list and manage users. The backend provides a REST API (Node.js + Express + MongoDB) and the frontend is a Vite + React app that consumes those APIs.
 
-**Contents**
-- **Overview**: What the project does
-- **Features**: Core user-facing and admin features
-- **Tech stack**: Libraries and services used
-- **Repository structure**: Important files and folders
-- **Getting started**: How to run backend & frontend locally
-- **Environment variables**: Required settings for local development
-- **API overview**: Main endpoints and protection
-- **Data models**: Primary schema fields
-- **Notes**: Implementation details and tips
+![GitHub last commit](https://img.shields.io/github/last-commit/prabhath777/ATP_24EG107B65?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/prabhath777/ATP_24EG107B65?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge\&logo=mongodb)
+![Express.js](https://img.shields.io/badge/Express.js-Backend-black?style=for-the-badge\&logo=express)
+![React](https://img.shields.io/badge/React-Frontend-blue?style=for-the-badge\&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-Runtime-green?style=for-the-badge\&logo=node.js)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange?style=for-the-badge)
+
+###  A role-based full-stack blogging platform built using the MERN stack.
+
+🔗 **Live Demo:** [BlogappB65.vercel.app](https://BlogappB65.vercel.app)
+
+</div>
 
 ---
 
-## Overview
+# 📖 Overview
 
-This repository contains two parts:
+This project is a complete full-stack blogging application where users can:
 
-- `BLOG-APP-BACKEND`: Express-based REST API that handles authentication, user management, article management, image uploads (Cloudinary), and role-based authorization.
-- `BLOG-APP-FRONTEND`: React (Vite) single-page application that provides the UI for users, authors, and admins.
+* Read articles
+* Publish blogs
+* Comment on posts
+* Manage accounts using role-based access
+* Upload profile images
+* Authenticate securely using JWT cookies
 
-Both projects are designed to be run independently during development and communicate via REST requests. The backend stores authentication tokens in an HTTP-only cookie; the frontend uses `axios` with `withCredentials: true` to include that cookie on requests.
+The application is divided into:
 
-## Features
+* **Frontend:** React + Vite
+* **Backend:** Node.js + Express
+* **Database:** MongoDB
+* **Media Storage:** Cloudinary
 
-- Role-based authentication and authorization (`USER`, `AUTHOR`, `ADMIN`)
-- User registration with profile image upload to Cloudinary
-- Login/Logout with JWT stored in an HTTP-only cookie
-- Authors can create, edit, and soft-delete articles
-- Users can read articles and add comments
-- Admins can list users by role and block/activate accounts
-- Input validation and basic error handling
+This is not just another CRUD tutorial project.
+The architecture includes authentication flow, protected routes, authorization middleware, state management, image upload handling, and scalable folder structure.
 
-## Tech stack
+---
 
-- Backend: Node.js, Express, Mongoose (MongoDB), JSON Web Tokens, Multer (in-memory), Cloudinary
-- Frontend: React, Vite, Tailwind CSS, Axios, React Router, Zustand (state)
+# ⚡ Features
 
-## Repository structure (high level)
+## 👤 Authentication System
 
-- [BLOG-APP-BACKEND](BLOG-APP-BACKEND/README.md) — backend project and API
-  - [server.js](BLOG-APP-BACKEND/server.js)
-  - [APIs](BLOG-APP-BACKEND/APIs) — route modules (`AdminAPI.js`, `AuthorAPI.js`, `CommonAPI.js`, `UserAPI.js`)
-  - [models](BLOG-APP-BACKEND/models) — `UserModel.js`, `articleModel.js`
-  - [config](BLOG-APP-BACKEND/config) — `cloudinary.js`, `multer.js`, `cloudinaryUpload.js`
-  - [middlewares](BLOG-APP-BACKEND/middlewares) — `verifyToken.js`
+* Secure Login & Signup
+* JWT Authentication
+* HTTP-only Cookie Storage
+* Protected Routes
+* Role-Based Authorization
 
-- [BLOG-APP-FRONTEND](BLOG-APP-FRONTEND/README.md) — frontend app
-  - [src/api/axiosInstance.js](BLOG-APP-FRONTEND/src/api/axiosInstance.js) — centralized axios instance with `withCredentials`
-  - [src](BLOG-APP-FRONTEND/src) — React components, routes, and pages
+## ✍️ Author Features
 
-## Getting started (local development)
+* Create Articles
+* Edit Articles
+* Soft Delete Articles
+* Manage Published Content
 
-Prerequisites:
+## 🧑‍💻 User Features
 
-- Node.js (16+ recommended)
-- npm or yarn
-- MongoDB (local instance or MongoDB Atlas)
-- Cloudinary account (for image uploads)
+* Browse Articles
+* Read Blogs
+* Add Comments
+* Access Responsive UI
 
-1. Clone the repository and open the workspace root.
+## 🛡️ Admin Features
 
-Backend
+* Manage Users
+* Block/Activate Accounts
+* View Users by Roles
+
+## ☁️ Cloud Features
+
+* Cloudinary Image Uploads
+* Persistent Media Storage
+* REST API Integration
+
+---
+
+# 🧠 Tech Stack
+
+| Category         | Technologies                            |
+| ---------------- | --------------------------------------- |
+| Frontend         | React, Vite, Tailwind CSS, React Router |
+| Backend          | Node.js, Express.js                     |
+| Database         | MongoDB, Mongoose                       |
+| Authentication   | JWT, Cookies                            |
+| File Uploads     | Multer, Cloudinary                      |
+| State Management | Zustand                                 |
+| API Handling     | Axios                                   |
+| Deployment       | Vercel, Render                          |
+
+---
+
+# 🏗️ Project Structure
 
 ```bash
-cd BLOG-APP-BACKEND
-npm install
-# create a .env file (see sample below)
-npm start
+BLOG-APP
+│
+├── BLOG-APP-BACKEND
+│   ├── APIs
+│   ├── config
+│   ├── middlewares
+│   ├── models
+│   ├── server.js
+│   └── package.json
+│
+├── BLOG-APP-FRONTEND
+│   ├── src
+│   ├── public
+│   ├── vite.config.js
+│   └── package.json
+│
+└── README.md
 ```
 
-Frontend
+---
 
-```bash
-cd BLOG-APP-FRONTEND
-npm install
-# create a .env file (see sample below)
-npm run dev
-```
+# 🔐 Roles in the Application
 
-Open the frontend at the port Vite shows (defaults to `http://localhost:5173`). The frontend uses `VITE_API_BASE_URL` to point to the backend (default: `http://localhost:4000`).
+| Role   | Permissions                       |
+| ------ | --------------------------------- |
+| USER   | Read and comment on blogs         |
+| AUTHOR | Create, edit, and manage articles |
+| ADMIN  | Manage users and system access    |
 
-## Environment variables
+---
 
-Backend example (`BLOG-APP-BACKEND/.env`):
+# 🌐 Deployment
 
-```
+## Frontend
+
+Deployed on **Vercel**
+
+🔗 [https://BlogappB65.vercel.app](https://BlogappB65.vercel.app)
+
+## Backend
+
+Deployed on **Render**
+
+---
+
+# ⚙️ Environment Variables
+
+## Backend `.env`
+
+```env
 PORT=4000
-DB_URL=mongodb://localhost:27017/blog_app_db
-SECRET_KEY=your_jwt_secret
+DB_URL=your_mongodb_url
+SECRET_KEY=your_secret_key
 FRONTEND_URL=http://localhost:5173
+
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 ```
 
-Frontend example (`BLOG-APP-FRONTEND/.env`):
+## Frontend `.env`
 
-```
+```env
 VITE_API_BASE_URL=http://localhost:4000
 ```
 
-## API overview
+---
 
-All backend routes are registered under prefixes in `server.js`.
+# 🚀 Local Setup
 
-- Authentication / common routes (prefix: `/auth`)
-  - `POST /auth/user` — Register a new user (multipart/form-data; field `profileImageUrl` for image)
-  - `POST /auth/login` — Login with `{ email, password }` (stores JWT cookie)
-  - `GET /auth/logout` — Clear auth cookie
-  - `PUT /auth/password` — Change password (protected)
+## 1️⃣ Clone Repository
 
-- User routes (prefix: `/user-api`) — protected with role `USER`
-  - `GET /user-api/articles` — Get all active articles
-  - `PUT /user-api/articles` — Add comment `{ articleID, comment }`
+```bash
+git clone https://github.com/prabhath777/ATP_24EG107B65.git
+```
 
-- Author routes (prefix: `/author-api`) — protected with role `AUTHOR`
-  - `POST /author-api/article` — Create/article publish
-  - `GET /author-api/articles` — Get author's articles
-  - `PUT /author-api/articles` — Edit article
-  - `PATCH /author-api/articles` — Soft-delete / toggle active
+---
 
-- Admin routes (prefix: `/admin-api`) — protected with role `ADMIN`
-  - `GET /admin-api/users/:user` — List emails by role (`user` or `author`)
-  - `PUT /admin-api/activate-user` — Activate user by email
-  - `PUT /admin-api/block-user` — Block user by email
+## 2️⃣ Backend Setup
 
-Authentication is enforced by the `verifyToken` middleware which checks the JWT from an HTTP-only cookie and the allowed role(s).
+```bash
+cd BLOG-APP-BACKEND
+npm install
+npm start
+```
 
-## Data models (summary)
+---
 
-- `UserModel` (fields): `firstName`, `lastName`, `email`, `password` (hashed), `role` (`USER|AUTHOR|ADMIN`), `profileImageUrl`, `isUserActive`
-- `ArticleModel` (fields): `author` (ObjectId), `title`, `category`, `content`, `comment` (array of `{ user, comment }`), `isArticleActive`
+## 3️⃣ Frontend Setup
 
-## Notes & implementation details
+```bash
+cd BLOG-APP-FRONTEND
+npm install
+npm run dev
+```
 
-- Image uploads: The backend accepts image uploads using `multer` configured to store files in memory, then streams them to Cloudinary via `cloudinary.uploader.upload_stream`.
-- Sessions: JWTs are signed and returned to the client inside an HTTP-only cookie; frontend must call APIs with credentials (`axios` instance sets `withCredentials: true`).
-- Soft delete: Articles are not permanently removed; `isArticleActive` toggles visibility.
+---
 
-## Useful links
+# 📡 API Routes Overview
 
-- Backend entrypoint: [BLOG-APP-BACKEND/server.js](BLOG-APP-BACKEND/server.js)
-- Auth routes and user registration: [BLOG-APP-BACKEND/APIs/CommonAPI.js](BLOG-APP-BACKEND/APIs/CommonAPI.js)
-- Author routes: [BLOG-APP-BACKEND/APIs/AuthorAPI.js](BLOG-APP-BACKEND/APIs/AuthorAPI.js)
-- Admin routes: [BLOG-APP-BACKEND/APIs/AdminAPI.js](BLOG-APP-BACKEND/APIs/AdminAPI.js)
-- User routes: [BLOG-APP-BACKEND/APIs/UserAPI.js](BLOG-APP-BACKEND/APIs/UserAPI.js)
+## Authentication Routes
+
+| Method | Endpoint         | Description     |
+| ------ | ---------------- | --------------- |
+| POST   | `/auth/user`     | Register User   |
+| POST   | `/auth/login`    | Login User      |
+| GET    | `/auth/logout`   | Logout User     |
+| PUT    | `/auth/password` | Change Password |
+
+---
+
+## User Routes
+
+| Method | Endpoint             |
+| ------ | -------------------- |
+| GET    | `/user-api/articles` |
+| PUT    | `/user-api/articles` |
+
+---
+
+## Author Routes
+
+| Method | Endpoint               |
+| ------ | ---------------------- |
+| POST   | `/author-api/article`  |
+| GET    | `/author-api/articles` |
+| PUT    | `/author-api/articles` |
+| PATCH  | `/author-api/articles` |
+
+---
+
+## Admin Routes
+
+| Method | Endpoint                   |
+| ------ | -------------------------- |
+| GET    | `/admin-api/users/:user`   |
+| PUT    | `/admin-api/activate-user` |
+| PUT    | `/admin-api/block-user`    |
+
+---
+
+# 🧩 Core Backend Concepts Used
+
+* REST API Design
+* Middleware Architecture
+* JWT Verification
+* Cookie-Based Authentication
+* Role-Based Authorization
+* MVC-like Folder Structure
+* MongoDB Relationships
+* File Upload Handling
+* Cloud Storage Integration
+
+---
+
+# 🎨 Frontend Concepts Used
+
+* React Functional Components
+* React Hooks
+* Zustand State Management
+* Protected Routing
+* API Integration with Axios
+* Responsive UI Design
+* Component Reusability
+
+---
+
+# 📌 Important Notes
+
+* Articles are **soft deleted** instead of permanently removed.
+* JWT tokens are stored in **HTTP-only cookies** for security.
+* Frontend requests use:
+
+```js
+withCredentials: true
+```
+
+* Image uploads are streamed to Cloudinary using Multer memory storage.
+
+---
+
+# 📚 Future Improvements
+
+* Rich Text Editor
+* Article Likes & Bookmarks
+* Real-Time Notifications
+* Markdown Support
+* Search & Filtering
+* Dark Mode
+* AI Blog Summaries
+* Admin Dashboard Analytics
+
+---
+
+# 🧪 Learning Outcomes
+
+This project helped in understanding:
+
+* Full-stack application architecture
+* Authentication workflows
+* Real deployment debugging
+* State management patterns
+* Backend route protection
+* API communication
+* Production environment configuration
+
+
+---
+
+# 👨‍💻 Author
+
+### Prabhath
+
+
+# 📜 License
+
+This project is licensed under the MIT License.
 
 
