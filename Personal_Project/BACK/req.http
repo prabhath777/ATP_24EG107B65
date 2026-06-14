@@ -1,0 +1,149 @@
+### Register User
+POST http://localhost:5000/api/auth/register-user
+Content-Type: application/json
+
+{
+  "name":"Prabhath",
+    "email":"prabhath@gmail.com",
+    "password":"123456",
+    "phone":"9876543210",
+    "age":20,
+    "bloodGroup":"O+",
+    "role":"USER"
+}
+
+###
+
+### Login User
+POST http://localhost:5000/api/auth/login-user
+Content-Type: application/json
+
+{
+    "phone":"9876543210",
+    "password": "123456"
+}
+
+###
+
+### Current User
+GET http://localhost:5000/api/auth/me/
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhNTYzYjRkNzJlMjkxYWM3YThmMCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzgxMzc2NTkxLCJleHAiOjE3ODE5ODEzOTF9.3rsyhc3sjTQo6fInRDDgc7UmquRE3Tjbk21wHn7T32g
+###
+
+### Logout
+POST http://localhost:5000/api/auth/logout
+
+###
+
+### Register Organization
+
+POST http://localhost:5000/api/auth/register-org
+Content-Type: application/json
+
+{
+    "orgName": "Apollo Blood Bank",
+    "email": "apollo@gmail.com",
+    "password": "123456",
+
+    "phone": "9876543210",
+
+    "pocName": "Dr Ramesh",
+    "pocPhone": "9123456789",
+
+    "type": "Blood Bank",
+
+    "address": "MG Road",
+
+    "district": "Krishna",
+
+    "state": "Andhra Pradesh",
+
+    "pincode": "521001"
+}
+
+### Login Organization
+
+POST http://localhost:5000/api/auth/login-org
+Content-Type: application/json
+
+{
+    "email": "apollo@gmail.com",
+    "password": "123456"
+}
+
+### Get Current Organization
+
+GET http://localhost:5000/api/auth/me
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhOGJiNjU3ZjI4ZjdiZGFlMDcwNSIsInJvbGUiOiJPUkciLCJpYXQiOjE3ODEzNzcyMzgsImV4cCI6MTc4MTk4MjAzOH0.pUBaX98OAst3Vq226B22VlG54SQD9a6Y5QQuAmOm72E
+
+
+### Update Stock
+
+PUT http://localhost:5000/api/org/stock
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhOGJiNjU3ZjI4ZjdiZGFlMDcwNSIsInJvbGUiOiJPUkciLCJpYXQiOjE3ODEzNzcyMzgsImV4cCI6MTc4MTk4MjAzOH0.pUBaX98OAst3Vq226B22VlG54SQD9a6Y5QQuAmOm72E
+Content-Type: application/json
+
+{
+    "A_POS": 20,
+    "A_NEG": 5,
+    "B_POS": 12,
+    "O_POS": 35
+}
+
+###
+GET http://localhost:5000/api/org/stock
+
+
+
+### Create Request
+
+POST http://localhost:5000/api/requests
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhNTYzYjRkNzJlMjkxYWM3YThmMCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzgxMzc2NTkxLCJleHAiOjE3ODE5ODEzOTF9.3rsyhc3sjTQo6fInRDDgc7UmquRE3Tjbk21wHn7T32g
+Content-Type: application/json
+
+{
+    "patientName":"Ravi Kumar",
+    "bloodGroup":"O+",
+    "unitsRequired":2,
+    "hospitalName":"Apollo Hospital",
+    "contactNumber":"9876543210",
+    "urgencyLevel":"Critical",
+    "address":"MG Road",
+    "district":"Krishna",
+    "state":"Andhra Pradesh"
+}
+
+###
+
+### Get My Requests
+
+GET http://localhost:5000/api/requests/my
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhNTYzYjRkNzJlMjkxYWM3YThmMCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzgxMzc2NTkxLCJleHAiOjE3ODE5ODEzOTF9.3rsyhc3sjTQo6fInRDDgc7UmquRE3Tjbk21wHn7T32g
+
+###
+
+### Org View Requests
+
+GET http://localhost:5000/api/requests
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhOGJiNjU3ZjI4ZjdiZGFlMDcwNSIsInJvbGUiOiJPUkciLCJpYXQiOjE3ODEzNzcyMzgsImV4cCI6MTc4MTk4MjAzOH0.pUBaX98OAst3Vq226B22VlG54SQD9a6Y5QQuAmOm72E
+
+###
+
+### Accept Request
+
+PATCH http://localhost:5000/api/requests/6a2dad1724cf36a2a92dc8d9/accept
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhOGJiNjU3ZjI4ZjdiZGFlMDcwNSIsInJvbGUiOiJPUkciLCJpYXQiOjE3ODEzNzcyMzgsImV4cCI6MTc4MTk4MjAzOH0.pUBaX98OAst3Vq226B22VlG54SQD9a6Y5QQuAmOm72E
+
+###
+
+### Complete Request
+
+PATCH http://localhost:5000/api/requests/6a2dad1724cf36a2a92dc8d9/complete
+token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMmRhOGJiNjU3ZjI4ZjdiZGFlMDcwNSIsInJvbGUiOiJPUkciLCJpYXQiOjE3ODEzNzcyMzgsImV4cCI6MTc4MTk4MjAzOH0.pUBaX98OAst3Vq226B22VlG54SQD9a6Y5QQuAmOm72E
+
+###
+
+### Cancel Request
+
+PATCH http://localhost:5000/api/requests/REQUEST_ID/cancel
+token: USER_TOKEN

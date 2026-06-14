@@ -1,22 +1,23 @@
-// Emergency Blood Locator Design System v2
-// Warm Healthcare SaaS
-// Premium whitespace + soft surfaces + trust-first design
+// Emergency Blood Locator Design System
+// Clean healthcare SaaS design language
+// No gradients. No heavy shadows. Information first.
+
 
 // ─────────────────────────────────────
 // Layout
 // ─────────────────────────────────────
 
 export const pageBackground =
-  "bg-[#fcfbf8] min-h-screen text-[#1f2937]";
+  "bg-white min-h-screen text-[#2e3440]";
 
 export const pageWrapper =
-  "max-w-[1400px] mx-auto px-6 lg:px-12 py-20";
+  "max-w-[1280px] mx-auto px-6 lg:px-12 py-16";
 
 export const section =
-  "py-28";
+  "py-20";
 
 export const narrowWrapper =
-  "max-w-4xl mx-auto px-6";
+  "max-w-3xl mx-auto px-6";
 
 
 // ─────────────────────────────────────
@@ -24,25 +25,25 @@ export const narrowWrapper =
 // ─────────────────────────────────────
 
 export const heroTitle =
-  "text-5xl md:text-7xl font-semibold tracking-[-0.05em] leading-[0.95] text-[#111827]";
+  "text-5xl md:text-6xl tracking-tight leading-[1.05] font-semibold text-[#111827]";
 
 export const pageTitle =
-  "text-[44px] font-semibold tracking-[-0.03em] text-[#111827]";
+  "text-[36px] tracking-tight font-semibold text-[#111827]";
 
 export const sectionTitle =
-  "text-[34px] font-semibold tracking-[-0.02em] text-[#111827]";
+  "text-[28px] tracking-tight font-semibold text-[#111827]";
 
 export const cardTitle =
-  "text-[18px] font-semibold text-[#111827]";
+  "text-[18px] font-medium text-[#111827]";
 
 export const bodyText =
-  "text-[16px] leading-[1.8] text-[#4b5563]";
+  "text-[15px] leading-[1.7] text-[#4b5563]";
 
 export const mutedText =
-  "text-[15px] leading-[1.7] text-[#6b7280]";
+  "text-[14px] leading-[1.6] text-[#6b7280]";
 
 export const smallText =
-  "text-[13px] text-[#9ca3af]";
+  "text-[13px] text-[#6b7280]";
 
 
 // ─────────────────────────────────────
@@ -50,19 +51,19 @@ export const smallText =
 // ─────────────────────────────────────
 
 export const navbar =
-  "sticky top-0 z-50 bg-[#fcfbf8]/80 backdrop-blur-xl border-b border-[#ececec]";
+  "sticky top-0 z-50 bg-white border-b border-[#e5e7eb]";
 
 export const navbarContainer =
-  "max-w-[1400px] mx-auto h-20 px-6 lg:px-12 flex items-center justify-between";
+  "max-w-[1280px] mx-auto h-16 px-6 lg:px-12 flex items-center justify-between";
 
 export const brand =
-  "text-[20px] font-semibold tracking-tight text-[#991b1b]";
+  "text-[18px] font-semibold text-[#b91c1c]";
 
 export const navLinks =
-  "hidden md:flex items-center gap-10";
+  "hidden md:flex items-center gap-8";
 
 export const navLink =
-  "text-[15px] font-medium text-[#6b7280] hover:text-[#111827] transition-colors";
+  "text-[14px] text-[#4b5563]";
 
 
 // ─────────────────────────────────────
@@ -70,13 +71,13 @@ export const navLink =
 // ─────────────────────────────────────
 
 export const primaryBtn =
-  "bg-[#991b1b] hover:bg-[#7f1d1d] text-white px-7 py-3 rounded-2xl text-[15px] font-medium transition-all";
+  "bg-[#b91c1c] text-white px-6 py-3 rounded-xl text-[15px] font-medium";
 
 export const secondaryBtn =
-  "bg-white border border-[#e5e7eb] text-[#111827] px-7 py-3 rounded-2xl text-[15px] font-medium";
+  "border border-[#d1d5db] bg-white text-[#111827] px-6 py-3 rounded-xl text-[15px] font-medium";
 
 export const ghostBtn =
-  "text-[#991b1b] text-[15px] font-medium";
+  "text-[#b91c1c] text-[14px] font-medium";
 
 
 // ─────────────────────────────────────
@@ -84,13 +85,13 @@ export const ghostBtn =
 // ─────────────────────────────────────
 
 export const heroSection =
-  "py-32";
+  "py-24";
 
 export const heroContent =
-  "max-w-5xl flex flex-col gap-10";
+  "max-w-4xl flex flex-col gap-8";
 
 export const heroActions =
-  "flex flex-wrap gap-5";
+  "flex flex-wrap gap-4";
 
 
 // ─────────────────────────────────────
@@ -98,13 +99,13 @@ export const heroActions =
 // ─────────────────────────────────────
 
 export const card =
-  "bg-white border border-[#efefef] rounded-[32px] p-7";
+  "bg-white border border-[#e5e7eb] rounded-2xl p-6";
 
 export const softCard =
-  "bg-[#fff7f7] border border-[#fde8e8] rounded-[32px] p-7";
+  "bg-[#f9fafb] border border-[#e5e7eb] rounded-2xl p-6";
 
 export const dashboardCard =
-  "bg-white border border-[#efefef] rounded-[36px] p-8";
+  "bg-white border border-[#e5e7eb] rounded-2xl p-8";
 
 
 // ─────────────────────────────────────
@@ -112,10 +113,10 @@ export const dashboardCard =
 // ─────────────────────────────────────
 
 export const centerCard =
-  "bg-white border border-[#efefef] rounded-[32px] p-7 flex flex-col gap-5";
+  "bg-white border border-[#e5e7eb] rounded-2xl p-6 flex flex-col gap-4";
 
 export const centerName =
-  "text-[20px] font-semibold text-[#111827]";
+  "text-[18px] font-semibold text-[#111827]";
 
 export const centerMeta =
   "text-[14px] text-[#6b7280]";
@@ -126,16 +127,16 @@ export const centerMeta =
 // ─────────────────────────────────────
 
 export const stockGrid =
-  "grid grid-cols-2 md:grid-cols-4 gap-4";
+  "grid grid-cols-2 md:grid-cols-4 gap-3";
 
 export const stockPill =
-  "bg-[#fff5f5] border border-[#fee2e2] rounded-2xl px-4 py-4 flex justify-between items-center";
+  "bg-[#f3f4f6] rounded-xl px-4 py-3 flex justify-between items-center";
 
 export const stockLabel =
-  "text-[14px] font-medium text-[#374151]";
+  "text-[14px] font-medium text-[#111827]";
 
 export const stockValue =
-  "text-[15px] font-semibold text-[#991b1b]";
+  "text-[14px] font-semibold text-[#b91c1c]";
 
 
 // ─────────────────────────────────────
@@ -146,13 +147,13 @@ export const statsGrid =
   "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6";
 
 export const statsCard =
-  "bg-white border border-[#efefef] rounded-[32px] p-7";
+  "bg-white border border-[#e5e7eb] rounded-2xl p-6";
 
 export const statsLabel =
-  "text-[13px] text-[#9ca3af]";
+  "text-[13px] text-[#6b7280]";
 
 export const statsValue =
-  "text-[40px] tracking-tight font-semibold text-[#111827]";
+  "text-[32px] font-semibold text-[#111827]";
 
 
 // ─────────────────────────────────────
@@ -160,13 +161,13 @@ export const statsValue =
 // ─────────────────────────────────────
 
 export const pendingBadge =
-  "px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-700";
+  "px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700";
 
 export const acceptedBadge =
-  "px-3 py-1 rounded-full text-xs font-medium bg-sky-100 text-sky-700";
+  "px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700";
 
 export const completedBadge =
-  "px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700";
+  "px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700";
 
 export const cancelledBadge =
   "px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-700";
@@ -177,19 +178,19 @@ export const cancelledBadge =
 // ─────────────────────────────────────
 
 export const tableWrapper =
-  "overflow-x-auto border border-[#efefef] rounded-[32px]";
+  "overflow-x-auto border border-[#e5e7eb] rounded-2xl";
 
 export const table =
-  "min-w-full";
+  "min-w-full divide-y divide-[#e5e7eb]";
 
 export const tableHead =
-  "bg-[#fafafa]";
+  "bg-[#f9fafb]";
 
 export const tableHeadCell =
-  "px-6 py-5 text-left text-xs uppercase tracking-wider text-[#6b7280]";
+  "px-6 py-4 text-left text-xs font-medium uppercase tracking-wider text-[#6b7280]";
 
 export const tableCell =
-  "px-6 py-5 whitespace-nowrap text-sm text-[#374151]";
+  "px-6 py-4 whitespace-nowrap text-sm text-[#374151]";
 
 
 // ─────────────────────────────────────
@@ -197,28 +198,28 @@ export const tableCell =
 // ─────────────────────────────────────
 
 export const formCard =
-  "bg-white border border-[#efefef] rounded-[36px] p-10";
+  "bg-white border border-[#e5e7eb] rounded-2xl p-8";
 
 export const formTitle =
-  "text-[28px] font-semibold text-[#111827]";
+  "text-[24px] font-semibold text-[#111827]";
 
 export const formGroup =
   "flex flex-col gap-2";
 
 export const label =
-  "text-[14px] font-medium text-[#374151]";
+  "text-[14px] font-medium text-[#111827]";
 
 export const input =
-  "w-full h-12 rounded-2xl border border-[#e5e7eb] bg-white px-4 text-[15px] focus:outline-none focus:border-[#991b1b]";
+  "w-full h-11 rounded-xl border border-[#d1d5db] px-4 text-[14px] focus:outline-none focus:border-[#b91c1c]";
 
 export const select =
-  "w-full h-12 rounded-2xl border border-[#e5e7eb] bg-white px-4 text-[15px] focus:outline-none focus:border-[#991b1b]";
+  "w-full h-11 rounded-xl border border-[#d1d5db] px-4 text-[14px] bg-white focus:outline-none focus:border-[#b91c1c]";
 
 export const textarea =
-  "w-full rounded-2xl border border-[#e5e7eb] bg-white px-4 py-4 text-[15px] focus:outline-none focus:border-[#991b1b]";
+  "w-full rounded-xl border border-[#d1d5db] px-4 py-3 text-[14px] focus:outline-none focus:border-[#b91c1c]";
 
 export const submitBtn =
-  "w-full bg-[#991b1b] text-white py-3 rounded-2xl text-[15px] font-medium";
+  "w-full bg-[#b91c1c] text-white py-3 rounded-xl text-[15px] font-medium";
 
 
 // ─────────────────────────────────────
@@ -226,10 +227,10 @@ export const submitBtn =
 // ─────────────────────────────────────
 
 export const emptyState =
-  "text-center py-20 text-[#9ca3af]";
+  "text-center py-16 text-[#6b7280]";
 
 export const loading =
-  "text-center py-20 text-[#9ca3af] animate-pulse";
+  "text-center py-16 text-[#6b7280] animate-pulse";
 
 
 // ─────────────────────────────────────
@@ -237,13 +238,13 @@ export const loading =
 // ─────────────────────────────────────
 
 export const divider =
-  "border-t border-[#efefef]";
+  "border-t border-[#e5e7eb]";
 
 export const gridTwo =
-  "grid grid-cols-1 md:grid-cols-2 gap-8";
+  "grid grid-cols-1 md:grid-cols-2 gap-6";
 
 export const gridThree =
-  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
+  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
 
 export const gridFour =
-  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";
+  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6";
