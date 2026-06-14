@@ -3,8 +3,8 @@ import {config} from 'dotenv'
 import {connect} from 'mongoose'
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import { authApp } from "./apis/auth.js";
-import { orgApp } from "./apis/org.js";
+import { authApp } from "./Apis/auth.js";
+import { orgApp } from "./Apis/org.js";
 import { requestApp } from "./Apis/requests.js";
 import { userApp } from "./Apis/user.js";
 
