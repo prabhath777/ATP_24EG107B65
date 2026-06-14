@@ -2,9 +2,9 @@ import exp from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-import { UserModel } from "../models/UserModel.js";
-import { OrganizationModel } from "../models/OrganizationModel.js";
-import { verifyToken } from "../middlewares/verifyToken.js";
+import { UserModel } from "../Models/Usermodel.js";
+import { OrganizationModel } from "../Models/Organizationmodel.js";
+import { verifyToken } from "../Middlewares/verifytoken.js";
 
 export const authApp = exp.Router();
 

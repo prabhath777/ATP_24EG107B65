@@ -1,6 +1,6 @@
 import exp from "express";
-import { OrganizationModel } from "../models/OrganizationModel.js";
-import { verifyToken } from "../middlewares/verifyToken.js";
+import { OrganizationModel } from "../Models/Organizationmodel.js";
+import { verifyToken } from "../Middlewares/verifytoken.js";
 
 export const orgApp = exp.Router();
 

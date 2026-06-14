@@ -1,8 +1,8 @@
 import exp from "express";
 
-import { BloodRequestModel } from "../models/BloodRequestModel.js";
-import { OrganizationModel } from "../models/OrganizationModel.js";
-import { verifyToken } from "../middlewares/verifyToken.js";
+import { BloodRequestModel } from "../Models/BloodRequestModel.js";
+import { OrganizationModel } from "../Models/Organizationmodel.js";
+import { verifyToken } from "../Middlewares/verifytoken.js";
 
 export const requestApp = exp.Router();
 

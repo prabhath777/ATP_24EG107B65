@@ -1,7 +1,7 @@
 import exp from "express";
 
-import { UserModel } from "../models/UserModel.js";
-import { verifyToken } from "../middlewares/verifyToken.js";
+import { UserModel } from "../Models/Usermodel.js";
+import { verifyToken } from "../Middlewares/verifytoken.js";
 
 export const userApp = exp.Router();
 
